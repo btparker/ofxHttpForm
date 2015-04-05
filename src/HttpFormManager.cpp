@@ -38,6 +38,7 @@ HttpFormManager::HttpFormManager(){
 	enableProxy = false;
 	proxyPort = 80;
 	usingCredentials = false;
+	usingToken = false;
 }
 
 HttpFormManager::~HttpFormManager(){
@@ -88,6 +89,11 @@ void HttpFormManager::setCredentials(string newUsername, string newPassword){
 	username = newUsername;
 	password = newPassword;
 	usingCredentials = true;
+}
+
+void HttpFormManager::setToken(string token){
+	this->token = token;
+	usingToken = true;
 }
 
 void HttpFormManager::draw(int x, int y){
